@@ -1,0 +1,5 @@
+Hi ${RECIPIENT_NAME}!
+
+Here's a message from my very own email client!
+
+Best Regards!

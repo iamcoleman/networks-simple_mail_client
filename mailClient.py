@@ -19,7 +19,7 @@ def getRecipient():
     """
     Returns the recipient name and address from user input
 
-    :return:
+    :return recName, recAddress:
     """
 
     yes = {'yes', 'ye', 'y'}
@@ -42,7 +42,7 @@ def getMessage(filename):
     Returns a Template object for the message
 
     :param filename:
-    :return:
+    :return Template:
     """
 
     with open(filename, 'r', encoding='utf-8') as template_file:

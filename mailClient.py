@@ -61,8 +61,8 @@ def main():
     print("\nCreated the message:\n\n{}\n".format(message))
 
     # setup the SMTP server
-    MY_ADDRESS, MY_PASSWORD = yourMailLogin.yourMailLogin()
-    SERVER_ADDRESS, SERVER_PORT = yourMailLogin.yourMailSMTP()
+    MY_ADDRESS, MY_PASSWORD = yourMailLogin.your_mail_login()
+    SERVER_ADDRESS, SERVER_PORT = yourMailLogin.your_mail_smtp()
     try:
         print("Connecting to mail server...")
         server = smtplib.SMTP(host=SERVER_ADDRESS, port=SERVER_PORT)

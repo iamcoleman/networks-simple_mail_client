@@ -1,18 +1,9 @@
-# yourMailLogin.py
-import yourMailLogin
-
-# Template
-from string import Template
-
-# SMTP
-import smtplib
-
-# MIMEMultipart Message Object
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-
-# Email Validation
-from validate_email import validate_email
+import yourMailLogin                           # yourMailLogin.py
+from string import Template                    # Template
+import smtplib                                 # SMTP
+from email.mime.multipart import MIMEMultipart # MIMEMultipart Message Object
+from email.mime.text import MIMEText           # MIMEMultipart Message Object
+from validate_email import validate_email      # Email Validation
 
 
 def get_recipient():
@@ -40,6 +31,7 @@ def get_recipient():
 def get_message(filename):
     """
     Returns a Template object for the message
+    ${RECIPIENT_NAME} is the only template used
 
     :param filename:
     :return Template:
@@ -54,7 +46,7 @@ def main():
     # get the name and address of recipient
     rec_name, rec_address = get_recipient()
 
-    # get the message to email
+    # get the message from `email_message.txt` to email
     # ${RECIPIENT_NAME} in template will get replaced
     message_template = get_message('email_message.txt')
     message = message_template.substitute(RECIPIENT_NAME=rec_name)
